@@ -4,8 +4,8 @@
     INNER JOIN pericias ON personagem.id_personagem = pericias.id_personagem 
     INNER JOIN armaspersonagem ON personagem.id_personagem = armaspersonagem.id_personagem";
     $result = $con->query($sql);
-
-    if ($result->num_rows > 0) {
+    $qtd = $result->num_rows;
+    if ($qtd > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
     
@@ -73,15 +73,33 @@
                             echo "1d10 concussão";
                         }
                     }else{
-                        echo 1+floor(((int)$row['forca']-10)/2);
+                        echo 1+floor(((int)$row['forca']-10)/2)." concussão";
                     }
                 ?>
             </div>
         </div>
-        <div class="row ml-5 mt-3">
-            <button type="button" class="btn btn-primary ml-3" data-toggle="modal" data-target="#exampleModalLong<?php echo $row['id_personagem']; ?>">
-                Equipamentos
-            </button>
+        <div class="row mt-2 text-center">
+            <div class="col-12">
+                <?php 
+                    for($i = 1; $i <= $qtd; $i++){
+                        ?>
+                            <?php echo $i; ?>º <input type="checkbox">
+                        <?php 
+                    }
+                ?>
+            </div>
+        </div>
+        <div class="row mt-3 text-center">
+            <div class="col-6">
+                <button type="button" class="btn btn-primary ml-3" data-toggle="modal" data-target="#exampleModalLong<?php echo $row['id_personagem']; ?>">
+                    Equipamentos
+                </button>
+            </div>
+            <div class="col-6">
+                <button type="button" class="btn btn-primary ml-3">
+                    Gravar
+                </button>
+            </div>
         </div>
         </div>
         </div>
