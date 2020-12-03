@@ -17,7 +17,11 @@
 <body>
     <?php include "menu.html"; ?>
     <main>
-        <?php include "personagensCombate.php"; ?>
+        <div class="container">
+            <div class="row mt-4">
+                <?php include "personagensCombate.php"; ?>
+            </div>
+        </div>
     </main>
     <hr/>
     <div class="container">

@@ -1,6 +1,7 @@
 <?php
     include "conection.php";
 
+    //Recebimento dos dados
     $nome = $_POST['nomePersonagem'];
     $class = $_POST['class'];
     $nivel = $_POST['nivel'];
@@ -115,6 +116,8 @@
     }else{
         $sobrevivencia = 0;
     }
+
+    //Bonus de raça
     if($raca == "Humano"){
         $for+=1;
         $des+=1;
@@ -142,6 +145,7 @@
         $int+=1;
         $car+=2;
     }
+    //Definição da class de armadura
     if($armadura == "nenhuma"){
         echo "Erro";
         if($class == "barbaro"){
@@ -174,11 +178,15 @@
         $classDeArmadura+=2;
     }
     $iniciativa = floor((($des-10)/2));
+
+    //Deslocamento
     if($raca == "Anão" || $raca == "Halfling" || $raca == "Gnomo"){
         $deslocamento = 7.5;
     }else{
         $deslocamento = 9;
     }
+
+    //Bonus de proficiencia 
     if($nivel <= 4){
         $bonus = 2;
     }else if($nivel <= 8){
@@ -190,6 +198,8 @@
     }else if($nivel <= 20){
         $bonus = 6;
     }
+
+    //envios ao banco
     $stmt = $con->prepare("INSERT INTO personagem (nome, class, nivel, armadura, iniciativa, deslocamento, bonus, forca, destreza, constituicao, inteligencia, sabedoria, carisma, vida, vida_atual, mana, mana_atual) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?)");
     $stmt->bind_param("ssiiiiiiiiiiiiiii", $nome, $class, $nivel, $classDeArmadura, $iniciativa, $deslocamento, $bonus, $for, $des, $cons, $int, $sab, $car,$vida,$vida,$mana,$mana);
     $stmt->execute();
