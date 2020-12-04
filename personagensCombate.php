@@ -92,7 +92,7 @@
         <div class="row mt-3 text-center">
             <div class="col-6">
                 <button type="button" class="btn btn-primary ml-3" data-toggle="modal" data-target="#exampleModalLong<?php echo $row['id_personagem']; ?>">
-                    Equipamentos
+                    Atributos
                 </button>
             </div>
             <div class="col-6">
@@ -151,26 +151,26 @@
                         <div>Car:<?php echo $row['carisma']; ?>(<?php echo floor(($row['carisma']-10)/2); ?>)</div>
                     </div>
                     <div class="col-5 pl-3 pr-0">
-                        <div><input type="checkbox" <?php if($row['acrobacia']==1){echo "checked";}?>>Acrobacia(Des)</div>
-                        <div><input type="checkbox" <?php if($row['ade_animais']==1){echo "checked";}?>>Ade Animais(Sab)</div>
-                        <div><input type="checkbox" <?php if($row['arcanismo']==1){echo "checked";}?>>Arcanismo (Int)</div>
-                        <div><input type="checkbox" <?php if($row['atletismo']==1){echo "checked";}?>>Atletismo (For)</div>
-                        <div><input type="checkbox" <?php if($row['atuacao']==1){echo "checked";}?>>Atuação (Car)</div>
-                        <div><input type="checkbox" <?php if($row['enganacao']==1){echo "checked";}?>>Enganação(Car)</div>
-                        <div><input type="checkbox" <?php if($row['furtividade']==1){echo "checked";}?>>Furtividade (Des)</div>
-                        <div><input type="checkbox" <?php if($row['historia']==1){echo "checked";}?>>História (Int)</div>
-                        <div><input type="checkbox" <?php if($row['intimidacao']==1){echo "checked";}?>>Intimidação (Car)</div>
+                        <div><input type="checkbox" onclick="return false;" <?php if($row['acrobacia']==1){echo "checked";}?>>Acrobacia(Des)</div>
+                        <div><input type="checkbox" onclick="return false;" <?php if($row['ade_animais']==1){echo "checked";}?>>Ade Animais(Sab)</div>
+                        <div><input type="checkbox" onclick="return false;" <?php if($row['arcanismo']==1){echo "checked";}?>>Arcanismo (Int)</div>
+                        <div><input type="checkbox" onclick="return false;" <?php if($row['atletismo']==1){echo "checked";}?>>Atletismo (For)</div>
+                        <div><input type="checkbox" onclick="return false;" <?php if($row['atuacao']==1){echo "checked";}?>>Atuação (Car)</div>
+                        <div><input type="checkbox" onclick="return false;" <?php if($row['enganacao']==1){echo "checked";}?>>Enganação(Car)</div>
+                        <div><input type="checkbox" onclick="return false;" <?php if($row['furtividade']==1){echo "checked";}?>>Furtividade (Des)</div>
+                        <div><input type="checkbox" onclick="return false;" <?php if($row['historia']==1){echo "checked";}?>>História (Int)</div>
+                        <div><input type="checkbox" onclick="return false;" <?php if($row['intimidacao']==1){echo "checked";}?>>Intimidação (Car)</div>
                     </div>
                     <div class="col-5 pl-1 pr-0">
-                        <div><input type="checkbox" <?php if($row['intuicao']==1){echo "checked";}?>>Intuição (Sab)</div>
-                        <div><input type="checkbox" <?php if($row['investigacao']==1){echo "checked";}?>>Investigação (Int)</div>
-                        <div><input type="checkbox" <?php if($row['medicina']==1){echo "checked";}?>>Medicina (Sab)</div>
-                        <div><input type="checkbox" <?php if($row['natureza']==1){echo "checked";}?>>Natureza (Int)</div>
-                        <div><input type="checkbox" <?php if($row['percepcao']==1){echo "checked";}?>>Percepção (Sab)</div>
-                        <div><input type="checkbox" <?php if($row['persuasao']==1){echo "checked";}?>>Persuasão (Car)</div>
-                        <div><input type="checkbox" <?php if($row['prestidigitacao']==1){echo "checked";}?>>Prestidigitação (Des)</div>
-                        <div><input type="checkbox" <?php if($row['religiao']==1){echo "checked";}?>>Religião (Int)</div>
-                        <div><input type="checkbox" <?php if($row['sobrevivencia']==1){echo "checked";}?>>Sobrevivência (Sab)</div>
+                        <div><input type="checkbox" onclick="return false;" <?php if($row['intuicao']==1){echo "checked";}?>>Intuição (Sab)</div>
+                        <div><input type="checkbox" onclick="return false;" <?php if($row['investigacao']==1){echo "checked";}?>>Investigação (Int)</div>
+                        <div><input type="checkbox" onclick="return false;" <?php if($row['medicina']==1){echo "checked";}?>>Medicina (Sab)</div>
+                        <div><input type="checkbox" onclick="return false;" <?php if($row['natureza']==1){echo "checked";}?>>Natureza (Int)</div>
+                        <div><input type="checkbox" onclick="return false;" <?php if($row['percepcao']==1){echo "checked";}?>>Percepção (Sab)</div>
+                        <div><input type="checkbox" onclick="return false;" <?php if($row['persuasao']==1){echo "checked";}?>>Persuasão (Car)</div>
+                        <div><input type="checkbox" onclick="return false;" <?php if($row['prestidigitacao']==1){echo "checked";}?>>Prestidigitação (Des)</div>
+                        <div><input type="checkbox" onclick="return false;" <?php if($row['religiao']==1){echo "checked";}?>>Religião (Int)</div>
+                        <div><input type="checkbox" onclick="return false;" <?php if($row['sobrevivencia']==1){echo "checked";}?>>Sobrevivência (Sab)</div>
                     </div>
                     </div>
                 </div>

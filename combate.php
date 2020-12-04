@@ -46,7 +46,9 @@
                 while($row = $result->fetch_assoc()){
             ?>
                 <option value="<?php echo $row['nome'] ?>"><?php echo $row['nome'] ?></option>
-            <?php } ?>
+            <?php }
+            $con->close();
+             ?>
             </select>
             <h4>Dados</h4>
             <select name="habilidade" id="habilidade">
@@ -57,6 +59,27 @@
                 <option value="sabedoria">Sabedoria</option>
                 <option value="carisma">Carisma</option>
             </select>
+            <select name="pericia" id="pericia">
+                <option value="nenhum">Nenhum</option>
+                <option value="acrobacia">Acrobacia</option>
+                <option value="ade_animais">Adestrar Animais</option>
+                <option value="arcanismo">Arcanismo</option>
+                <option value="atletismo">Atletismo</option>
+                <option value="atuacao">Atuação</option>
+                <option value="enganacao">Enganação</option>
+                <option value="furtividade">Furtividade</option>
+                <option value="historia">História</option>
+                <option value="intimidacao">Intimidação</option>
+                <option value="intuicao">Intuição</option>
+                <option value="investigacao">Investigação</option>
+                <option value="medicina">Medicina</option>
+                <option value="natureza">Natureza</option>
+                <option value="percepcao">Percepção</option>
+                <option value="persuasao">Persuasão</option>
+                <option value="prestidigitacao">Prestidigitação</option>
+                <option value="religiao">Religião</option>
+                <option value="sobrevivencia">Sobrevivência</option>
+            </select>
             <select name="dadoSelect" id="dado">
                 <option value="0">Nenhum</option>
                 <option value="20">d20</option>
@@ -65,9 +88,10 @@
                 <option value="6">d6</option>
                 <option value="4">d4</option>
             </select>
-            <input type="text" id="valorTirado" value="">
+            <input type="text" id="valorTirado" size="5" value="">
             <button id="resultado">Contabilizar</button>
             <br><br>
+            <span id="resultadoDado"></span><br>
             <span id="mostrarResultado"></span>
         </div>
     </div>
